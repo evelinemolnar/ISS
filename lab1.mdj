@@ -2510,6 +2510,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"top": -48,
 											"height": 13
 										},
 										{
@@ -2520,7 +2521,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 573,
-											"top": 495,
+											"top": 471,
 											"width": 119.58349609375,
 											"height": 13,
 											"text": "OderItem"
@@ -2533,6 +2534,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"top": -48,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -2545,13 +2547,14 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"top": -48,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 568,
-									"top": 488,
+									"top": 464,
 									"width": 129.58349609375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -2588,7 +2591,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 573,
-											"top": 518,
+											"top": 494,
 											"width": 119.58349609375,
 											"height": 13,
 											"text": "+quantity: Integer",
@@ -2605,7 +2608,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 573,
-											"top": 533,
+											"top": 509,
 											"width": 119.58349609375,
 											"height": 13,
 											"text": "+comments: String",
@@ -2614,7 +2617,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 568,
-									"top": 513,
+									"top": 489,
 									"width": 129.58349609375,
 									"height": 38
 								},
@@ -2629,7 +2632,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 568,
-									"top": 551,
+									"top": 527,
 									"width": 129.58349609375,
 									"height": 10
 								},
@@ -2644,6 +2647,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
+									"top": -24,
 									"width": 10,
 									"height": 10
 								},
@@ -2658,6 +2662,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
+									"top": -24,
 									"width": 10,
 									"height": 10
 								}
@@ -2665,7 +2670,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 568,
-							"top": 488,
+							"top": 464,
 							"width": 129.58349609375,
 							"height": 73,
 							"nameCompartment": {
@@ -2935,6 +2940,25 @@
 							"enumerationLiteralCompartment": {
 								"$ref": "AAAAAAGHssuSvErx5Vg="
 							}
+						},
+						{
+							"_type": "UMLAssociationClassLinkView",
+							"_id": "AAAAAAGHsveflt0JcpU=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "AAAAAAGHsveflt0IJnY="
+							},
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF4eQFNszxJ7zw="
+							},
+							"tail": {
+								"$ref": "AAAAAAGHRuA062NgdJQ="
+							},
+							"lineStyle": 1,
+							"points": "567:500;432:500"
 						}
 					]
 				},
@@ -3614,6 +3638,21 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "OderItem",
+					"ownedElements": [
+						{
+							"_type": "UMLAssociationClassLink",
+							"_id": "AAAAAAGHsveflt0IJnY=",
+							"_parent": {
+								"$ref": "AAAAAAGHRuA062NeKQU="
+							},
+							"classSide": {
+								"$ref": "AAAAAAGHRuA062NeKQU="
+							},
+							"associationSide": {
+								"$ref": "AAAAAAF4eQFNsjxFy2s="
+							}
+						}
+					],
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
