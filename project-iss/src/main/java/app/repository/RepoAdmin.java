@@ -18,7 +18,7 @@ public class RepoAdmin implements ICrudAdmin {
     public Object findByUsernameAndPassword(String username, String password) throws MyException {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            Object admin = session.createQuery("from Admin where username = :username and parola = :password")
+            Object admin = session.createQuery("from Admin where username = :username and password = :password")
                     .setParameter("username", username)
                     .setParameter("password", password)
                     .uniqueResult();
