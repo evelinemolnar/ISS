@@ -1,7 +1,7 @@
 package app.repository;
 
 import app.model.Product;
-import app.model.Product;
+import app.repository.interfaces.ICrudProduct;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -10,20 +10,16 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.List;
 
-/**
- * 
- */
 public class RepoProduct implements ICrudProduct {
 
     private static SessionFactory sessionFactory;
-    /**
-     * Default constructor
-     */
-    public RepoProduct() {
+
+
+    public RepoProduct(SessionFactory sessionFactory){
+        this.sessionFactory = sessionFactory;
     }
 
     static void initialize() {
-        // A SessionFactory is set up once for an application!
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .configure() // configures settings from hibernate.cfg.xml
                 .build();
@@ -116,39 +112,5 @@ public class RepoProduct implements ICrudProduct {
 
         return p;
     }
-
-
-    @Override
-    public Product findOne(String u)
-    {
-        Product p = null;
-
-        try(Session session = sessionFactory.openSession()){
-            session.beginTransaction();
-            List<Product> prods = session.createQuery("FROM Product", Product.class).list();
-            for (Product prod : prods) {
-                if(prod.getName().equals(u))
-                    p = new Product(prod.getName(), prod.getPrice(), prod.getQuantity());
-            }
-            session.getTransaction().commit();
-        }
-
-
-        if(p != null)
-            System.out.println("Product: " + p.getName());
-        else
-            System.out.println("User null!!");
-
-        return p;
-    }
-
-    /**
-     * @return
-     */
-    public List<Product> orderByPrice() {
-        // TODO implement here
-        return null;
-    }
-
 
 }

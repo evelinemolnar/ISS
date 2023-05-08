@@ -1,15 +1,16 @@
 package app.controller;
 
 import app.model.Product;
-import app.model.User;
 import app.service.Observer;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainController implements Initializable, Observer {
+public class MainController implements Initializable {
+
 
     private Stage stage = new Stage();
 
@@ -23,18 +24,6 @@ public class MainController implements Initializable, Observer {
 
     }
 
-    @Override
-    public void update(Product prod) {
 
-    }
 
-    @Override
-    public void userLoggedIn(User user) {
-
-    }
-
-    @Override
-    public void userLoggedOut(User user) {
-
-    }
 }

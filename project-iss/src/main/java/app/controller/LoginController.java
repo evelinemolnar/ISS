@@ -1,8 +1,5 @@
 package app.controller;
 
-import app.model.User;
-import app.model.UserType;
-import app.service.IService;
 import app.service.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -33,12 +29,11 @@ public class LoginController {
         this.stage = stage1;
     }
 
-    IService service;
 
-    public LoginController() throws Exception {
-    }
+    Service service;
 
-    public void setService(IService s){
+
+    public void setService(Service s){
         this.service = s;
     }
 
@@ -49,10 +44,7 @@ public class LoginController {
     }
 
     private MainController mainCtrl;
-    private User crtUser;
-    public void setUser(User user) {
-        this.crtUser = user;
-    }
+
 
     @FXML
     public void initialize() throws IOException {
@@ -69,20 +61,14 @@ public class LoginController {
 
     }
 
+
     public void handleSubmitButtonAction(ActionEvent actionEvent) throws IOException {
 
         String nume = usernameField.getText();
         String passwd = passwordField.getText();
         String type = comboBox.getSelectionModel().getSelectedItem().toString();
 
-        if(type.startsWith("agent"))
-            this.crtUser = new User(nume, passwd, UserType.AGENT);
-        else
 
-            this.crtUser = new User(nume, passwd, UserType.ADMIN);
-
- //       User user = service.login(crtUser);
-//        user != null
         if(type.equals("agent"))
         {
             FXMLLoader loader = new FXMLLoader();
