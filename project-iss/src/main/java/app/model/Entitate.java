@@ -1,7 +1,7 @@
 package app.model;
 
 
-public interface Entity<ID>{
+public interface Entitate<ID>{
 
     ID getId();
 

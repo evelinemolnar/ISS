@@ -1,9 +1,10 @@
 package app.model;
 
-/**
- * 
- */
-public class Product implements Entity<Integer> {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Product")
+public class Product implements Entitate<Integer> {
 
 
     public Product() {
@@ -16,6 +17,8 @@ public class Product implements Entity<Integer> {
         this.quantity = quantity;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Override
     public Integer getId() {

@@ -1,8 +1,13 @@
 package app.model;
 
+import javax.persistence.*;
 
-public class Order implements Entity<Integer>{
+@Entity
+@Table(name = "Order")
+public class Order implements Entitate<Integer> {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Integer agentId;
     private Integer productId;

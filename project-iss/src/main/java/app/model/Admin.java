@@ -1,7 +1,18 @@
 package app.model;
 
-public class Admin implements Entity<Integer>{
+import javax.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.lang.annotation.Annotation;
 
+@Entity
+@Table(name = "Admin")
+public class Admin implements Entitate<Integer>{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String password;

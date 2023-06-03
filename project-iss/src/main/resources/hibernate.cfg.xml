@@ -8,9 +8,8 @@
 
         <property name="dialect">app.repository.dialect.SQLiteDialect</property>
         <property name="connection.driver_class">org.sqlite.JDBC</property>
-        <property name="connection.url">jdbc:sqlite:agentie</property>
-
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="connection.url">jdbc:sqlite:agentie2.db</property>
+        <!-- property name="hibernate.hbm2ddl.auto">update</property -->
 
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
@@ -18,8 +17,8 @@
 
         <mapping resource="Admin.hbm.xml"/>
         <mapping resource="Agent.hbm.xml"/>
-        <mapping resource="Order.hbm.xml"/>
         <mapping resource="Product.hbm.xml"/>
+        <mapping resource="Order.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

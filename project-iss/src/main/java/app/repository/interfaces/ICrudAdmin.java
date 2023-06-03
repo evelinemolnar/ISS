@@ -5,5 +5,5 @@ import app.service.MyException;
 
 public interface ICrudAdmin extends ICrudRepo<Admin> {
 
-    public Object findByUsernameAndPassword(String username, String password) throws MyException;
+    Object findByUsernameAndPassword(String username, String password) throws MyException;
 }

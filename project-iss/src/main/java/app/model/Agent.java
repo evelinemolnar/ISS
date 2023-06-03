@@ -1,7 +1,13 @@
 package app.model;
 
-public class Agent implements Entity<Integer> {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Agent")
+public class Agent implements Entitate<Integer> {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String username;
     private String password;
